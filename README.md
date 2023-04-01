@@ -1,5 +1,5 @@
 # not-binary-presence
-This automation is inspired by exellent blog [Making Home Assistant’s Presence Detection not so Binary](https://philhawthorne.com/making-home-assistants-presence-detection-not-so-binary/) by Phil Hawthorne. The code were slightly simplified and improved. 
+This automation is inspired by exellent blog [Making Home Assistant’s Presence Detection not so Binary](https://philhawthorne.com/making-home-assistants-presence-detection-not-so-binary/) by [Phil Hawthorne](https://philhawthorne.com/). The code were slightly simplified and improved. 
 
 # how to use
 <p>Create user(s) following this pattern:
@@ -7,6 +7,7 @@ This automation is inspired by exellent blog [Making Home Assistant’s Presence
 ```
 person.person1
 person.person2
+...
 ```
 
 You can create as many persons as You like.
