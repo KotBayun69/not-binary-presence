@@ -1,0 +1,59 @@
+alias: Change person home presence
+description: Changes person home presence status not binary
+trigger:
+  - platform: state
+    id: Just Arrived
+    entity_id:
+      - person.person1
+      - person.person2
+    from: not_home
+    to: home
+  - platform: state
+    id: Home
+    entity_id:
+      - input_select.person1
+      - input_select.person2
+    to: Just Arrived
+    for:
+      hours: 0
+      minutes: 1
+      seconds: 0
+  - platform: state
+    id: Just Left
+    entity_id:
+      - person.person1
+      - person.person2
+    from: home
+    to: not_home
+  - platform: state
+    id: Away
+    entity_id:
+      - input_select.person1
+      - input_select.person2
+    to: Just Left
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 0
+  - platform: state
+    id: Home
+    entity_id:
+      - input_select.person1
+      - input_select.person2
+    from: Just Left
+    to: Just Arrived
+  - platform: state
+    id: Away
+    entity_id:
+      - input_select.person1
+      - input_select.person2
+    from: Just Arrived
+    to: Just Left
+condition: []
+action:
+  - service: input_select.select_option
+    data_template:
+      option: "{{trigger.id}}"
+    target:
+      entity_id: "{{trigger.entity_id.replace('person', 'input_select')}}"
+mode: single
