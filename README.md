@@ -21,6 +21,11 @@ input_select.person2
 
 for each person. 
 
-Create template sensor for each person and add them to dashboard. Optionaly You can customize them by adding a picture with `customize` section in Home Assistant `configuration.yaml` file. Put the picture file into `www` folder and access it with `/local/profile-pic.jpg`.
+Create template sensor for each person and add them to dashboard. Optionaly You can customize them by adding a picture with `customize` section in Home Assistant `configuration.yaml` file. Put the picture file into `www` folder and access it with `/local/profile-pic.jpg`. To use customization for Your entities add folowing lines to Home Assistant `configuration.yaml` file:
+
+```
+homeassistant:
+  customize:
+```
 
 Now each sensor will have corresponding person home presence status
