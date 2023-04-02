@@ -1,8 +1,8 @@
 - platform: template
   sensors:
-    sergey_home_status:
+    person1_home_status:
       value_template: "{{states('input_select.person1')}}"
       friendly_name: "Person1 Home Status"
-    elena_home_status:
+    person2_home_status:
       value_template: "{{states('input_select.person2')}}"
       friendly_name: "Person2 Home Status"
