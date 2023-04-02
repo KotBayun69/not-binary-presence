@@ -16,7 +16,7 @@ trigger:
     to: Just Arrived
     for:
       hours: 0
-      minutes: 1
+      minutes: 5
       seconds: 0
   - platform: state
     id: Just Left
