@@ -1,0 +1,7 @@
+sensor.person1_home_status:
+  entity_picture: /local/pictures/person1.profile.pic.jpg
+  friendly_name: Person1
+
+sensor.person2_home_status:
+  entity_picture: /local/pictures/person2.profile.pic.jpg
+  friendly_name: Person2
